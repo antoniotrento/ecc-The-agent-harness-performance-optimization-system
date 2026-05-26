@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cloudetta BI Dashboard Builder</title>
+  </head>
+  <body>
+    <!-- Background glowing visual effects -->
+    <div class="glow-background">
+      <div class="glow-orb glow-orb-1"></div>
+      <div class="glow-orb glow-orb-2"></div>
+    </div>
+
+    <!-- Main App Container -->
+    <div class="app-container">
+      
+      <!-- Sidebar navigation panel -->
+      <aside class="sidebar">
+        <div class="logo-section">
+          <div style="width: 32px; height: 32px; border-radius: 8px; background: linear-gradient(135deg, var(--primary), var(--accent-cyan)); display: grid; place-items: center; color: white; font-weight: bold; font-size: 1.2rem;">C</div>
+          <h1>Cloudetta BI</h1>
+        </div>
+
+        <ul class="nav-links">
+          <li class="nav-item active" data-view="dashboard">
+            <button>
+              <span class="icon">📊</span>
+              Dashboard Builder
+            </button>
+          </li>
+          <li class="nav-item" data-view="sql-editor">
+            <button>
+              <span class="icon">🗄️</span>
+              SQL Sandbox
+            </button>
+          </li>
+          <li class="nav-item" data-view="analytics">
+            <button>
+              <span class="icon">📈</span>
+              System Overview
+            </button>
+          </li>
+        </ul>
+
+        <!-- Bottom sidebar elements -->
+        <div style="margin-top: auto; display: flex; flex-direction: column; gap: 1rem;">
+          <div class="user-actions">
+            <button id="theme-toggle" class="theme-toggle" title="Toggle theme">☀️</button>
+            <div style="display: flex; flex-direction: column;">
+              <span style="font-size: 0.9rem; font-weight: 600;">System Administrator</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Cloudetta Local Host</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main working space panel -->
+      <main class="workspace" id="workspace-content">
+        <!-- Rendered dynamically by main.js -->
+      </main>
+
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
